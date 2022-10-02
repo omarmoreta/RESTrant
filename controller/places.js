@@ -22,4 +22,8 @@ router.get("/", (req, res) => {
   res.render("places/index", { places });
 });
 
+//Places New Page (create form)
+//Places Show Page (details page for one place)
+//Places Edit Page (edit form)
+
 module.exports = router;

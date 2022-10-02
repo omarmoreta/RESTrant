@@ -1,3 +1,4 @@
+//Dependencies
 require("dotenv").config();
 const viewsEngine = require("express-react-views").createEngine();
 const express = require("express");
@@ -8,9 +9,12 @@ const app = express();
 //Middleware
 app.set("view engine", "jsx");
 app.engine("jsx", viewsEngine);
+app.use(express.static("public"));
 
+//Contoller
 app.use("/places", placesController);
 
+//Routes
 app.get("/", (req, res) => {
   res.status(200).render("home");
 });
