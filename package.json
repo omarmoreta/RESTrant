@@ -1,0 +1,23 @@
+{
+  "name": "restrant",
+  "version": "1.0.0",
+  "description": "RESTrant project for the bootcamp to help students with any issues.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarmoreta/RESTrant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omarmoreta/RESTrant/issues"
+  },
+  "homepage": "https://github.com/omarmoreta/RESTrant#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
