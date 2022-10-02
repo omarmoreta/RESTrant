@@ -19,5 +19,8 @@
   "homepage": "https://github.com/omarmoreta/RESTrant#readme",
   "dependencies": {
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
   }
 }
