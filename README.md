@@ -22,8 +22,9 @@ REST-Rant is an app where users can review restaurants.
 
 ## Data Schema
 
-| Key | Type | Value |
-| name | string | "place name" |
-| city | string | "place city" |
-| state | string | "place state" |
-| pic | string | "place img url" |
+| Key   | Type   | Value           |
+| ----- | ------ | --------------- |
+| name  | string | "place name"    |
+| city  | string | "place city"    |
+| state | string | "place state"   |
+| pic   | string | "place img url" |
