@@ -22,10 +22,25 @@ REST-Rant is an app where users can review restaurants.
 
 ## Data Schema
 
-| Key      | Type   | Value            |
+Data will be stored in MongoDB with the help of Mongoose.
+
+###### Places
+
+| Field    | Type   | Example Value    |
 | -------- | ------ | ---------------- |
 | name     | string | "place name"     |
 | city     | string | "place city"     |
 | state    | string | "place state"    |
 | pic      | string | "place img url"  |
 | cuisines | string | "place cuisines" |
+
+###### Rants
+
+| Field    | Type                 | Example Value                                                         |
+| -------- | -------------------- | --------------------------------------------------------------------- |
+| \_id     | ObjectId             | ObjectId("507f1f77bcf86cd799439011")                                  |
+| place_id | ref(places) ObjectId | "#/relationship/<Data Source Name>/<Database Name>/<Collection Name>" |
+| rant     | boolean              | true/false                                                            |
+| rating   | number               | 3                                                                     |
+| comment  | string               | "place rant text"                                                     |
+| reviewer | string               | "place reviewer name"                                                 |
