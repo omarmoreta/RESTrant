@@ -24,7 +24,7 @@ REST-Rant is an app where users can review restaurants.
 
 Data will be stored in MongoDB with the help of Mongoose.
 
-###### Places
+### Places
 
 | Field    | Type   | Example Value   |
 | -------- | ------ | --------------- |
@@ -34,7 +34,7 @@ Data will be stored in MongoDB with the help of Mongoose.
 | pic      | string | "place img url" |
 | cuisines | string | "Fine Cuisine"  |
 
-###### Rants
+### Rants
 
 | Field    | Type                 | Example Value                                                   |
 | -------- | -------------------- | --------------------------------------------------------------- |
@@ -44,3 +44,8 @@ Data will be stored in MongoDB with the help of Mongoose.
 | rating   | number               | 3                                                               |
 | comment  | string               | "It was amazing!"                                               |
 | reviewer | string               | "John Doe"                                                      |
+
+### Images
+
+H-Thai-ML Photo by [Eiliv Aceron](https://unsplash.com/@shootdelicious?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Coding Cat Cafe Photo by [Hanny Naibaho](https://unsplash.com/@hannynaibaho?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
