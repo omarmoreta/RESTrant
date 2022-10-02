@@ -9,7 +9,9 @@ const Def = (html) => {
                 <link href="/style.css" rel="stylesheet" />
             </head>
             <body>
+                <div className="container text-center">
                 { html.children }
+                </div>
             </body>
         </html>
     )

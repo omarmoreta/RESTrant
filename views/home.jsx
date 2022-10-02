@@ -5,7 +5,7 @@ const Home = () => {
     return (
     <Def>
         <main>
-            <h1>HOME</h1>
+            <h1>REST-rant</h1>
             <div>
                 <img src="images/burger.jpg" alt="Flying burger with separated ingredients" />
                 <div>
