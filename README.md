@@ -4,6 +4,8 @@ RESTrant project for the bootcamp to help students with any issues.
 
 REST-Rant is an app where users can review restaurants.
 
+## Routes Table
+
 | Method | Path                     | Purpose                                        |
 | ------ | ------------------------ | ---------------------------------------------- |
 | GET    | /                        | Home Page                                      |
@@ -17,3 +19,11 @@ REST-Rant is an app where users can review restaurants.
 | POST   | /places/:id/rant         | Create a rant about a particular place         |
 | DELETE | /places/:id/rant/:rantid | Delete a rant about a particular place         |
 | GET    | \*                       | 404 Page (matches any route not defined above) |
+
+## Data Schema
+
+| Key | Type | Value |
+| name | string | "place name" |
+| city | string | "place city" |
+| state | string | "place state" |
+| pic | string | "place img url" |
