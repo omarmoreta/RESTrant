@@ -26,13 +26,13 @@ Data will be stored in MongoDB with the help of Mongoose.
 
 ###### Places
 
-| Field    | Type   | Example Value    |
-| -------- | ------ | ---------------- |
-| name     | string | "place name"     |
-| city     | string | "place city"     |
-| state    | string | "place state"    |
-| pic      | string | "place img url"  |
-| cuisines | string | "place cuisines" |
+| Field    | Type   | Example Value   |
+| -------- | ------ | --------------- |
+| name     | string | "McSteaks"      |
+| city     | string | "Las Vegas"     |
+| state    | string | "Montana"       |
+| pic      | string | "place img url" |
+| cuisines | string | "Fine Cuisine"  |
 
 ###### Rants
 
@@ -42,5 +42,5 @@ Data will be stored in MongoDB with the help of Mongoose.
 | place_id | ref(places) ObjectId | "#/relationship/Data Source Name/Database Name/Collection Name" |
 | rant     | boolean              | true/false                                                      |
 | rating   | number               | 3                                                               |
-| comment  | string               | "place rant text"                                               |
-| reviewer | string               | "place reviewer name"                                           |
+| comment  | string               | "It was amazing!"                                               |
+| reviewer | string               | "John Doe"                                                      |
