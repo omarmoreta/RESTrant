@@ -10,6 +10,7 @@ const app = express();
 app.set("view engine", "jsx");
 app.engine("jsx", viewsEngine);
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 //Contoller
 app.use("/places", placesController);

@@ -29,7 +29,8 @@ router.get("/new", (req, res) => {
 
 //POST /places
 router.post("/", (req, res) => {
-  res.redirect("/places");
+  console.log(req.body);
+  res.send("POST /places");
 });
 //Places Show Page (details page for one place)
 //Places Edit Page (edit form)
