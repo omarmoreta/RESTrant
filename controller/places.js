@@ -1,24 +1,8 @@
 const router = require("express").Router();
+const places = require("../models/places");
 
 //GET /places
 router.get("/", (req, res) => {
-  let places = [
-    {
-      name: "H-Thai-ML",
-      city: "Seattle",
-      state: "WA",
-      cuisines: "Thai, Pan-Asian",
-      pic: "images/hthaiml.jpg",
-    },
-    {
-      name: "Coding Cat Cafe",
-      city: "Phoenix",
-      state: "AZ",
-      cuisines: "Coffee, Bakery",
-      pic: "images/cafe.jpg",
-    },
-  ];
-
   res.render("places/index", { places });
 });
 
@@ -30,8 +14,19 @@ router.get("/new", (req, res) => {
 //POST /places
 router.post("/", (req, res) => {
   console.log(req.body);
-  res.send("POST /places");
+  if (!req.body.pic) {
+    req.body.pic = "images/default.jpg";
+  }
+  if (!req.body.city) {
+    req.body.city = "Anytown";
+  }
+  if (!req.body.state) {
+    req.body.state = "USA";
+  }
+  places.push(req.body);
+  res.redirect("/places");
 });
+
 //Places Show Page (details page for one place)
 //Places Edit Page (edit form)
 
