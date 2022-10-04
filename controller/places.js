@@ -15,7 +15,7 @@ router.get("/new", (req, res) => {
 router.post("/", (req, res) => {
   console.log(req.body);
   if (!req.body.pic) {
-    req.body.pic = "images/default.jpg";
+    req.body.pic = "/images/default.jpg";
   }
   if (!req.body.city) {
     req.body.city = "Anytown";

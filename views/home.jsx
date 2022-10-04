@@ -7,7 +7,7 @@ const Home = () => {
         <main>
             <h1>REST-rant</h1>
             <div>
-                <img src="images/burger.jpg" alt="Flying burger with separated ingredients" />
+                <img src="/images/burger.jpg" alt="Flying burger with separated ingredients" />
                 <div>
                     Photo by <a href="https://unsplash.com/@pablomerchanm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pablo Merchán Montes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 </div>
