@@ -2,6 +2,7 @@
 require("dotenv").config();
 const viewsEngine = require("express-react-views").createEngine();
 const express = require("express");
+const methodOverride = require("method-override");
 const placesController = require("./controller/places");
 const PORT = process.env.PORT;
 const app = express();
@@ -11,6 +12,7 @@ app.set("view engine", "jsx");
 app.engine("jsx", viewsEngine);
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 
 //Contoller
 app.use("/places", placesController);

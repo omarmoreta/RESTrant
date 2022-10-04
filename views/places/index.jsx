@@ -6,7 +6,7 @@ const Index = (data) => {
     return (
       <div key={ index } className="col-sm-6">
         <h2 className="text-center">
-          <a href={ `/places/${index}` }>{ place.name }</a>
+          <a href={ `/places/${ index }` }>{ place.name }</a>
         </h2>
         <p className="text-center">{ place.cuisines }</p>
         <img src={ place.pic } alt={ place.name } />
