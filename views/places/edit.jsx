@@ -4,11 +4,11 @@ const Def = require("../default")
 const Edit = (data) => {
     return (
         <Def>
-            <h1>Add a New Place</h1>
-            <form action={ `/places${ data.place.id }?_method=PUT`} method="PUT">
+            <h1>Edit Place</h1>
+            <form action={ `/places/${ data.id }?_method=PUT`} method="POST">
                 <div className="form-group">
                     <label htmlFor="name">Place Name</label>
-                    <input className="form-control" id="name" name="name" value={ data.place.name } required />
+                    <input className="form-control" id="name" name="name" required />
                 </div>
                 <div className="form-group">
                     <label htmlFor="pic">Place Picture</label>
@@ -78,7 +78,7 @@ const Edit = (data) => {
                     <label htmlFor="cuisines">Cuisines</label>
                     <input className="form-control" id="cuisines" name="cuisines" value={ data.place.cuisines } required />
                 </div>
-                <input className="btn btn-primary" type="submit" value="Add Place" />
+                <input className="btn btn-primary" type="submit" value="Edit Place" />
             </form>
         </Def>
     )
