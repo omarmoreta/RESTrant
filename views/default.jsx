@@ -17,7 +17,7 @@ const Def = (html) => {
                     </ul>
                 </nav>
                 <div className="container text-center">
-                { html.children }
+                    { html.children }
                 </div>
                 <div>
                     <footer className="footer">Created By Omar Moreta <div>&copy; 2022</div></footer>

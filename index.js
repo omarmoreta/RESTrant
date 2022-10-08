@@ -2,9 +2,11 @@
 require("dotenv").config();
 const viewsEngine = require("express-react-views").createEngine();
 const express = require("express");
+const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const placesController = require("./controller/places");
 const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
 const app = express();
 
 //Middleware
@@ -13,6 +15,18 @@ app.engine("jsx", viewsEngine);
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+mongoose.connect(
+  MONGO_URI,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  () => {
+    console.log(`connected to db:${MONGO_URI}`);
+  }
+);
+
+module.exports.Place = require("./models/places");
 
 //Contoller
 app.use("/places", placesController);
