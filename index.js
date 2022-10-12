@@ -26,7 +26,7 @@ mongoose.connect(
   }
 );
 
-module.exports.Place = require("./models/places");
+// module.exports.Place = require("./models/places");
 
 //Contoller
 app.use("/places", placesController);

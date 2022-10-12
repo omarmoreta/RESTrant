@@ -1,6 +1,6 @@
-const Place = require("../models/places");
+const db = require("../models");
 
-Place.create([
+db.Place.create([
   {
     name: "H-Thai-ML",
     city: "Seattle",
