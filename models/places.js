@@ -11,7 +11,6 @@ const placeSchema = new mongoose.Schema({
     type: Number,
     min: [1673, " Surely no that old?!"],
     max: [new Date().getFullYear(), " Hey, this year is in the future!"],
-    default: "1674",
   },
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment" }],
 });
