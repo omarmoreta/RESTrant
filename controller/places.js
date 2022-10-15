@@ -15,6 +15,12 @@ router.get("/", (req, res) => {
 
 //POST /places
 router.post("/", (req, res) => {
+  if (!req.body.pic) {
+    req.body.pic = "/images/default.jpg";
+  }
+  if (!req.body.city) {
+    req.body.city = "Anytown";
+  }
   db.Place.create(req.body)
     .then(() => {
       res.redirect("/places");
@@ -44,7 +50,6 @@ router.get("/:id", (req, res) => {
   db.Place.findById(req.params.id)
     .populate("comments")
     .then((place) => {
-      console.log(place.comments);
       res.render("places/show", { place });
     })
     .catch((err) => {
@@ -90,7 +95,10 @@ router.get("/:id/edit", (req, res) => {
 
 //POST /place/:id/comment
 router.post("/:id/comment", (req, res) => {
-  // console.log(req.body);
+  if (req.body.author === "") {
+    req.body.author = undefined;
+  }
+  req.body.rant = req.body.rant ? true : false;
   db.Place.findById(req.params.id)
     .then((place) => {
       db.Comment.create(req.body)
@@ -107,13 +115,19 @@ router.post("/:id/comment", (req, res) => {
     .catch((err) => {
       res.render("error404");
     });
-  req.body.rant = req.body.rant ? true : false;
-  res.send("GET /places/:id/comment stub");
 });
 
 //DELETE /places/:id/rant/:rantId
-router.delete("/:id/rant/:rantId", (req, res) => {
-  res.send("GET /places/:id/rant/:rantId stub");
+router.delete("/:id/rant/:commentId", (req, res) => {
+  db.Comment.findByIdAndDelete(req.params.commentId)
+    .then(() => {
+      console.log("Success");
+      res.redirect(`/places/${req.params.id}`);
+    })
+    .catch((err) => {
+      console.log("err", err);
+      res.render("error404");
+    });
 });
 
 module.exports = router;

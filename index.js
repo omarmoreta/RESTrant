@@ -15,18 +15,6 @@ app.engine("jsx", viewsEngine);
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-mongoose.connect(
-  MONGO_URI,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  () => {
-    console.log(`connected to db:${MONGO_URI}`);
-  }
-);
-
-// module.exports.Place = require("./models/places");
 
 //Contoller
 app.use("/places", placesController);
